@@ -35,7 +35,6 @@ a{
 .head h2 {
     width: 100%;
     text-align: center;
-    padding-bottom: 2%;
 }
 
 .list{
@@ -52,14 +51,23 @@ a{
     border-right: 1px solid rgba(10,10,10,0.4); */
     border-radius: 5px;
     margin-bottom: 1%;
+    transition: background-color 0.3s ease;
 }
 
 .complete{
     text-decoration: line-through;
+    background-color: lightpink;
+    animation-name: todo-transition-complete;
+    animation-duration: 0.3s;
 }
 
 .button{
     display: block;
     margin: 5% auto;
     padding: 1%;
+}
+
+@keyframes todo-transition-complete {
+    from {background-color: aliceblue;}
+    to {background-color: lightpink;}
 }

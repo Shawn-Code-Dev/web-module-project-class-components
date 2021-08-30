@@ -17,7 +17,12 @@ class TodoForm extends React.Component {
 
   handleSubmit = (e) => {
     e.preventDefault();
-    this.props.handleAdd(this.state.input);
+    if (this.state.input.length >= 1) {
+      this.props.handleAdd(this.state.input);
+      
+    } else {
+        alert("Not enought text")
+    }
     this.setState({
       input: "",
     });
